@@ -16,10 +16,10 @@ import {Meal} from './meal.model'
 export class AppComponent {
 
   public allMeals:Meal[]=[
-    new Meal("Turkey BLT Sandwhich","Didn't get a soda!",354),
-    new Meal("Fries","I only ate half of them.",365),
-    new Meal("Banana","not quite ripe",105),
-    new Meal("Heart Attack Burger","I'm feeling a sting in my right arm",700)
+    new Meal("Turkey BLT Sandwhich","Didn't get a soda!",354,"Breakfast"),
+    new Meal("Fries","I only ate half of them.",365,"Lunch"),
+    new Meal("Banana","not quite ripe",105,"Breakfast"),
+    new Meal("Heart Attack Burger","I'm feeling a sting in my right arm",700,"Lunch")
   ]
 
   addNewMeal(newMeal: Meal){

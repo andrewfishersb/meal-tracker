@@ -78,4 +78,5 @@ Add a new master component to average the total calories consumed per day so tha
 
 
 What's Next?
---Create a meal that has an array of food items - add up their calories???
+--refractor type of meal to be the days of the week or to use any date
+--add time stamp

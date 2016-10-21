@@ -11,6 +11,11 @@ import {Meal} from './meal.model';
   <input #newDetails>
   <label>Calories</label>
   <input type="number" #newCalories>
+  <select>
+    <option value="Breakfast">Breakfast</option>
+    <option value="Lunch">Lunch</option>
+    <option value="Dinner">Dinner</option>
+  </select>
   <button class="btn btn-primary" (click)="submitNewMeal(newMeal.value, newDetails.value, newCalories.value); newMeal.value=''; newDetails.value=''; newCalories.value=''">Submit</button>
 
   `
@@ -18,8 +23,7 @@ import {Meal} from './meal.model';
 
 export class NewMealComponent{
   @Output() createChildMeal = new EventEmitter();
-  submitNewMeal(food:string,details:string,calories:number){
-    // or add a new variable and take the new meal out of the createChildMeal.emit method
-    this.createChildMeal.emit(new Meal(food,details,calories));
+  submitNewMeal(food:string,details:string,calories:number,mealType:string){
+    this.createChildMeal.emit(new Meal(food,details,calories,"Lunch"));
   }
 }
