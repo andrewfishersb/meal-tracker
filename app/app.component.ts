@@ -8,8 +8,7 @@ import {Meal} from './meal.model'
     <h1>Meal Tracker</h1>
     <list-meals [childListMeals]='allMeals' (editButtonClicked)="clickedEditSetMeal($event)"></list-meals>
     <edit-meal [childEditMeal]='this.selectedMeal' (clickSender)="finishedEditing()"></edit-meal>
-    <new-meal></new-meal>
-    <button class="btn btn-primary">Add new Meal</button>
+    <new-meal (createChildMeal)="addNewMeal($event)"></new-meal>
   </div>
   `
 })
@@ -24,6 +23,10 @@ export class AppComponent {
     new Meal("Banana","not quite ripe",105)
   ]
 
+  addNewMeal(newMeal: Meal){
+    this.allMeals.push(newMeal);
+  }
+
   clickedEditSetMeal(lastClickedMeal: Meal){
     this.selectedMeal = lastClickedMeal;
   }
@@ -31,5 +34,7 @@ export class AppComponent {
   finishedEditing(){
     this.selectedMeal = null;
   }
+
+
 
 }
