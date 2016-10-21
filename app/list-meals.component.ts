@@ -1,5 +1,5 @@
 import {Meal} from "./meal.model";
-import {Component, Input} from "@angular/core";
+import {Component, Input, Output, EventEmitter} from "@angular/core";
 
 @Component({
   selector: 'list-meals',
@@ -9,7 +9,7 @@ import {Component, Input} from "@angular/core";
       <li>Meal: {{currentMeal.food}}</li>
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
-      <button class="btn btn-info">Edit</button>
+      <button class="btn btn-info" (click) = 'captureEditedMeal(currentMeal)'>Edit</button>
     </div>
 
   `
@@ -17,4 +17,8 @@ import {Component, Input} from "@angular/core";
 
 export class ListMealComponent{
   @Input() childListMeals: Meal[];
+  @Output() editButtonClicked = new EventEmitter();
+  captureEditedMeal(chosenMeal:Meal){
+    this.editButtonClicked.emit(chosenMeal);
+  }
 }
