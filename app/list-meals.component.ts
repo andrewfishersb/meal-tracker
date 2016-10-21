@@ -6,24 +6,30 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
   template:
   `
     <div class="row">
-      <select class="form-control filter" (change)="calorieFilter($event.target.value)">
-        <option value="all">All</option>
-        <option value="under-500">Under 500 Calories</option>
-        <option value="over-500">Over 500 Calories</option>
-      </select>
-      <select class="form-control filter" (change)="mealTypeFilter($event.target.value)">
-        <option value="all">All</option>
-        <option value="Breakfast">Breakfast</option>
-        <option value="Lunch">Lunch</option>
-        <option value="Dinner">Dinner</option>
-      </select>
+      <div class="filter">
+        <label>Filter by Calories</label>
+        <select class="form-control" (change)="calorieFilter($event.target.value)">
+          <option value="all">All</option>
+          <option value="under-500">Under 500 Calories</option>
+          <option value="over-500">Over 500 Calories</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label>Filter by Meal Type</label>
+        <select class="form-control" (change)="mealTypeFilter($event.target.value)">
+          <option value="all">All</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+        </select>
+      </div>
     </div>
 
-    <div class="meals col-md-6" *ngFor="let currentMeal of childListMeals|calories:filteredCalorie|mealTime:filteredMealType">
-      <li>Meal: {{currentMeal.food}}</li>
-      <li>Details: {{currentMeal.details}}</li>
-      <li>Calories: {{currentMeal.calories}}</li>
-      <li>Meal Time: {{currentMeal.mealType}}</li>
+    <div class="meals" *ngFor="let currentMeal of childListMeals|calories:filteredCalorie|mealTime:filteredMealType">
+      <h3>{{currentMeal.food}}</h3>
+      <h5>Details: {{currentMeal.details}}</h5>
+      <h5>Calories: {{currentMeal.calories}}</h5>
+      <h5>Meal Time: {{currentMeal.mealType}}</h5>
       <button class="btn btn-info" (click) = 'clickedEditSetMeal(currentMeal)'>Edit</button>
       <button class="btn btn-danger" (click) = 'deleteMeal(currentMeal)'>Delete</button>
       <div *ngIf="selectedMeal===currentMeal">

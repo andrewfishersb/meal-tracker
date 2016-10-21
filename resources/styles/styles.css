@@ -1,6 +1,20 @@
+body{
+  background: no-repeat fixed url("http://www.glutenfreemealplanner.com/images/Food_Vegetables_332001.jpg");
+}
+
+label{
+  color: white;
+  font-size: 20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .jumbotron{
   margin-top: 5px;
-  box-shadow: 5px 5px 5px darkgrey;
+  box-shadow: 5px 5px 10px black;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-color:rgba(204, 41, 0, 0.7);
+
 }
 .btn-primary{
     margin-top: 5px;
@@ -12,7 +26,24 @@
   float: left;
 }
 .meals{
-  border-style: groove;
+  color: white;
+  text-shadow: -1px 0  black, 0 1px  black, 1px 0  black, 0 -1px  black;
   margin-top: 10px;
-  
+  width: 350px;
+  margin-right: 20px;
+  float: left;
+  border-radius: 10px;
+  background-color: rgba(0, 153, 51, 0.7);
+  text-align: center;
+  border-color: black;
+  box-shadow: 3px 3px 3px 3px	black;
+  padding-bottom: 20px;
+}
+
+.edit{
+  width: 325px;
+  margin-left: 15px;
+}
+.btn-success{
+  margin-top: 10px;
 }

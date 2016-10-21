@@ -7,12 +7,13 @@ import {Meal} from './meal.model';
   `
   <div *ngIf='childEditMeal'>
     <label>Meal</label>
-    <input [(ngModel)]="childEditMeal.food">
+    <input class="form-control edit" [(ngModel)]="childEditMeal.food">
     <label>Details</label>
-    <input [(ngModel)]="childEditMeal.details">
+    <input class="form-control edit" [(ngModel)]="childEditMeal.details">
     <label>Calories</label>
-    <input type="number" [(ngModel)]="childEditMeal.calories">
-    <select [(ngModel)]="childEditMeal.mealType">
+    <input class="form-control edit" type="number" [(ngModel)]="childEditMeal.calories">
+    <label>Type of Meal</label>
+    <select class="form-control edit" [(ngModel)]="childEditMeal.mealType">
       <option value="Breakfast">Breakfast</option>
       <option value="Lunch">Lunch</option>
       <option value="Dinner">Dinner</option>
