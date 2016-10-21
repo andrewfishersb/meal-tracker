@@ -1,0 +1,18 @@
+.jumbotron{
+  margin-top: 5px;
+  box-shadow: 5px 5px 5px darkgrey;
+}
+.btn-primary{
+    margin-top: 5px;
+}
+
+.filter{
+  width: 45%;
+  margin-left: 15px;
+  float: left;
+}
+.meals{
+  border-style: groove;
+  margin-top: 10px;
+  
+}

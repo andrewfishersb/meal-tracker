@@ -6,12 +6,13 @@ import {Meal} from './meal.model';
   template:
   `
   <label>Food</label>
-  <input #newMeal>
+  <input class="form-control" #newMeal>
   <label>Details</label>
-  <input #newDetails>
+  <input class="form-control" #newDetails>
   <label>Calories</label>
-  <input type="number" #newCalories>
-  <select #newMealTime>
+  <input type="number" class="form-control" #newCalories>
+  <label>Meal Type</label>
+  <select class="form-control" #newMealTime>
     <option value="Breakfast">Breakfast</option>
     <option value="Lunch">Lunch</option>
     <option value="Dinner">Dinner</option>

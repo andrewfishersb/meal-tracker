@@ -5,10 +5,18 @@ import {Meal} from './meal.model'
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>Meal Tracker</h1>
-    <calculate-calories [childMealToCalculate]="allMeals"></calculate-calories>
-    <list-meals [childListMeals]='allMeals' (editButtonClicked)="clickedEditSetMeal($event)"></list-meals>
-    <new-meal (createChildMeal)="addNewMeal($event)"></new-meal>
+    <div class="jumbotron">
+      <h1>Meal Tracker</h1>
+      <calculate-calories [childMealToCalculate]="allMeals"></calculate-calories>
+    </div>
+    <div class='row'>
+      <div class="col-sm-8">
+        <list-meals [childListMeals]='allMeals' (editButtonClicked)="clickedEditSetMeal($event)"></list-meals>
+      </div>
+      <div class="col-sm-4">
+        <new-meal (createChildMeal)="addNewMeal($event)"></new-meal>
+      </div>
+    </div>
   </div>
   `
 })

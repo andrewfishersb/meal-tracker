@@ -12,7 +12,7 @@ import {Meal} from './meal.model';
     <input [(ngModel)]="childEditMeal.details">
     <label>Calories</label>
     <input type="number" [(ngModel)]="childEditMeal.calories">
-    <select>
+    <select [(ngModel)]="childEditMeal.mealType">
       <option value="Breakfast">Breakfast</option>
       <option value="Lunch">Lunch</option>
       <option value="Dinner">Dinner</option>

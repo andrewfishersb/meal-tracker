@@ -5,18 +5,21 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
   selector: 'list-meals',
   template:
   `
-    <select class="form-control" (change)="calorieFilter($event.target.value)">
-      <option value="all">All</option>
-      <option value="under-500">Under 500 Calories</option>
-      <option value="over-500">Over 500 Calories</option>
-    </select>
-    <select class="form-control" (change)="mealTypeFilter($event.target.value)">
-      <option value="all">All</option>
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-    </select>
-    <div *ngFor="let currentMeal of childListMeals|calories:filteredCalorie|mealTime:filteredMealType">
+    <div class="row">
+      <select class="form-control filter" (change)="calorieFilter($event.target.value)">
+        <option value="all">All</option>
+        <option value="under-500">Under 500 Calories</option>
+        <option value="over-500">Over 500 Calories</option>
+      </select>
+      <select class="form-control filter" (change)="mealTypeFilter($event.target.value)">
+        <option value="all">All</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+      </select>
+    </div>
+
+    <div class="meals col-md-6" *ngFor="let currentMeal of childListMeals|calories:filteredCalorie|mealTime:filteredMealType">
       <li>Meal: {{currentMeal.food}}</li>
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
