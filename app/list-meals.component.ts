@@ -24,7 +24,6 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
         </select>
       </div>
     </div>
-
     <div class="meals" *ngFor="let currentMeal of childListMeals|calories:filteredCalorie|mealTime:filteredMealType">
       <h3>{{currentMeal.food}}</h3>
       <h5>Details: {{currentMeal.details}}</h5>

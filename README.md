@@ -29,10 +29,17 @@ _This app lets a person enter meals that they have consumed alongside informatio
   * _Example Meals: [(Apple,Only ate half,50),(Fries,delicious,200),(Something Fatty,good but bad ,700)]_
   * _Example Input: Over 500 Calories_
   * _Example Output: Something Fatty,good but bad ,700_
-
-
-
-
+7. _User can enter a type of meal_
+  * _Example Input: Dinner_
+  * _Example Output: Dinner_
+8. _User can change the type of meal_
+  * _Example Data: Dinner_
+  * _Example Input: Lunch_
+  * _Example Output: Lunch_
+9. _User can filter by meal types_
+  * _Example Data: [(pancake,yum,580,breakfast),(pizza,1 slice, 220, Lunch),(eggs,over hard,200,breakfast)]_
+  * _Example Input: filter for breakfast_
+  * _Example Output: [(pancake,yum,580,breakfast),(eggs,over hard,200,breakfast)]_
 
 
 
@@ -45,9 +52,6 @@ _This app lets a person enter meals that they have consumed alongside informatio
 * _type gulp build in the terminal_
 * _type gulp serve in the terminal_
 
-## Known Bugs
-
-__
 
 ## Technologies Used
 
@@ -64,23 +68,3 @@ __
 *GPL*
 
 Copyright (c) 2016 **_Andrew Fisher_**
-
-
-
-## Prompt
-
-I want to log a food I have eaten by submitting a form with food name, calories and details.
-I want to view a list of foods I have logged.
-I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
-I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
-
-Further Exploration
-
-Display of the total number of calories consumed in a day, and/or the average number of calories consumed in a day.
-Add a property that records when each food was eaten. The user could enter a date and time, or the app can generate a timestamp.
-Expand the application to display multiple days of food logs. Group the food entries by day. Then include a component to display the total calories for whichever day the user selects.
-Add a new master component to average the total calories consumed per day so that the user can figure out how much exercise they should be getting on a regular basis.
-
-What's Next?
---refractor type of meal to be the days of the week or to use any date
---add time stamp

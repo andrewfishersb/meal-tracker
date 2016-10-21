@@ -24,18 +24,13 @@ import {Meal} from './meal.model'
 export class AppComponent {
 
   public allMeals:Meal[]=[
-    new Meal("Turkey BLT Sandwhich","Didn't get a soda!",354,"Breakfast"),
-    new Meal("Fries","I only ate half of them.",365,"Lunch"),
-    new Meal("Banana","not quite ripe",105,"Breakfast"),
-    new Meal("Heart Attack Burger","I'm feeling a sting in my right arm",700,"Lunch")
+    new Meal("Pancakes","Short stack",580,"Breakfast"),
+    new Meal("Pizza","Two slices",440,"Lunch"),
+    new Meal("Turkey BLT Sandwhich","chose over a cheesesteak",354,"Lunch"),
+    new Meal("Spaghetti alle vongole","Had less clams",570,"Dinner")
   ]
 
   addNewMeal(newMeal: Meal){
     this.allMeals.push(newMeal);
   }
-
-
-
-
-
 }

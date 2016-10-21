@@ -5,20 +5,21 @@ import {Meal} from './meal.model';
   selector: 'new-meal',
   template:
   `
-  <label>Food</label>
-  <input class="form-control" #newMeal>
-  <label>Details</label>
-  <input class="form-control" #newDetails>
-  <label>Calories</label>
-  <input type="number" class="form-control" #newCalories>
-  <label>Meal Type</label>
-  <select class="form-control" #newMealTime>
-    <option value="Breakfast">Breakfast</option>
-    <option value="Lunch">Lunch</option>
-    <option value="Dinner">Dinner</option>
-  </select>
-  <button class="btn btn-primary" (click)="submitNewMeal(newMeal.value, newDetails.value, newCalories.value,newMealTime.value); newMeal.value=''; newDetails.value=''; newCalories.value=''">Submit</button>
-
+  <div class='new-box'>
+    <label>Food</label>
+    <input class="form-control" #newMeal>
+    <label>Details</label>
+    <input class="form-control" #newDetails>
+    <label>Calories</label>
+    <input type="number" class="form-control" #newCalories>
+    <label>Meal Type</label>
+    <select class="form-control" #newMealTime>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+    <button class="btn btn-primary" (click)="submitNewMeal(newMeal.value, newDetails.value, newCalories.value,newMealTime.value); newMeal.value=''; newDetails.value=''; newCalories.value=''">Submit</button>
+</div>
   `
 })
 
