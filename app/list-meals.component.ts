@@ -5,12 +5,18 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
   selector: 'list-meals',
   template:
   `
-    <select class="form-control" (change)="selectedFilter($event.target.value)">
+    <select class="form-control" (change)="calorieFilter($event.target.value)">
       <option value="all">All</option>
       <option value="under-500">Under 500 Calories</option>
       <option value="over-500">Over 500 Calories</option>
     </select>
-    <div *ngFor="let currentMeal of childListMeals|calories:filteredElement">
+    <select class="form-control" (change)="mealTypeFilter($event.target.value)">
+      <option value="all">All</option>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+    <div *ngFor="let currentMeal of childListMeals|calories:filteredCalorie|mealTime:filteredMealType">
       <li>Meal: {{currentMeal.food}}</li>
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
@@ -27,11 +33,15 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
 
 export class ListMealComponent{
   @Input() childListMeals: Meal[];
-  public filteredElement: string = null;
+  public filteredCalorie: string = null;
+  public filteredMealType: string = null;
   public selectedMeal: Meal =null;
 
-  selectedFilter(desiredOutput: string){
-    this.filteredElement = desiredOutput;
+  calorieFilter(desiredOutput: string){
+    this.filteredCalorie = desiredOutput;
+  }
+  mealTypeFilter(desiredOutput: string){
+    this.filteredMealType=desiredOutput;
   }
 
   deleteMeal(toDeleteMeal: Meal){

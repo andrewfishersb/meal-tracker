@@ -6,7 +6,7 @@ import {Meal} from './meal.model';
   pure:false
 })
 
-export class CaloriesPipe{
+export class CaloriesPipe implements PipeTransform{
   transform(input:Meal[],desiredOutput:string){
     var output: Meal[] = [];
     for(var i = 0;i<input.length;i++){
