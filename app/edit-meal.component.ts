@@ -5,18 +5,20 @@ import {Meal} from './meal.model';
   selector: 'edit-meal',
   template:
   `
+  <div *ngIf='childEditMeal'>
     <label>Meal</label>
-    <input [(ngModel)]="clickMeal.food">
+    <input [(ngModel)]="childEditMeal.food">
     <label>Details</label>
-    <input [(ngModel)]="clickMeal.details">
+    <input [(ngModel)]="childEditMeal.details">
     <label>Calories</label>
-    <input type="number" [(ngModel)]="clickMeal.calories">
-
+    <input type="number" [(ngModel)]="childEditMeal.calories">
+    <button class="btn btn-success" (click)="editComplete()">Done</button>
+  </div>
   `
 })
 
 export class EditMealComponent{
-  @Input() childMeal: Meal;
+  @Input() childEditMeal: Meal;
   @Output() clickSender = new EventEmitter();
   editComplete(){
     this.clickSender.emit();

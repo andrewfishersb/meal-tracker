@@ -5,7 +5,7 @@ import {Component, Input} from "@angular/core";
   selector: 'list-meals',
   template:
   `
-    <div *ngFor="let currentMeal of childMeals">
+    <div *ngFor="let currentMeal of childListMeals">
       <li>Meal: {{currentMeal.food}}</li>
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
@@ -16,5 +16,5 @@ import {Component, Input} from "@angular/core";
 })
 
 export class ListMealComponent{
-  @Input() childMeals: Meal[];
+  @Input() childListMeals: Meal[];
 }

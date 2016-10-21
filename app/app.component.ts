@@ -6,8 +6,8 @@ import {Meal} from './meal.model'
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
-    <list-meals [childMeals]='allMeals'></list-meals>
-    <edit-meal></edit-meal>
+    <list-meals [childListMeals]='allMeals'></list-meals>
+    <edit-meal [childEditMeal]='testMeal' (clickSender)="finishedEditing()"></edit-meal>
   </div>
   `
 })
@@ -19,7 +19,10 @@ export class AppComponent {
     new Meal("Banana","not quite ripe",105)
   ]
 
+  public selectedMeal:Meal = null;
 
-
+  finishedEditing(){
+    this.selectedMeal=null
+  }
 
 }
