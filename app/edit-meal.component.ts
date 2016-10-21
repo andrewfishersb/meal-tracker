@@ -12,6 +12,11 @@ import {Meal} from './meal.model';
     <input [(ngModel)]="childEditMeal.details">
     <label>Calories</label>
     <input type="number" [(ngModel)]="childEditMeal.calories">
+    <select>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
     <button class="btn btn-success" (click)="editComplete()">Done</button>
   </div>
   `

@@ -14,7 +14,7 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
       <li>Meal: {{currentMeal.food}}</li>
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
-      <li>Time: {{currentMeal.mealType}}</li>
+      <li>Meal Time: {{currentMeal.mealType}}</li>
       <button class="btn btn-info" (click) = 'clickedEditSetMeal(currentMeal)'>Edit</button>
       <button class="btn btn-danger" (click) = 'deleteMeal(currentMeal)'>Delete</button>
       <div *ngIf="selectedMeal===currentMeal">

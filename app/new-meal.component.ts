@@ -11,19 +11,20 @@ import {Meal} from './meal.model';
   <input #newDetails>
   <label>Calories</label>
   <input type="number" #newCalories>
-  <select>
+  <select #newMealTime>
     <option value="Breakfast">Breakfast</option>
     <option value="Lunch">Lunch</option>
     <option value="Dinner">Dinner</option>
   </select>
-  <button class="btn btn-primary" (click)="submitNewMeal(newMeal.value, newDetails.value, newCalories.value); newMeal.value=''; newDetails.value=''; newCalories.value=''">Submit</button>
+  <button class="btn btn-primary" (click)="submitNewMeal(newMeal.value, newDetails.value, newCalories.value,newMealTime.value); newMeal.value=''; newDetails.value=''; newCalories.value=''">Submit</button>
 
   `
 })
 
 export class NewMealComponent{
   @Output() createChildMeal = new EventEmitter();
-  submitNewMeal(food:string,details:string,calories:number,mealType:string){
-    this.createChildMeal.emit(new Meal(food,details,calories,"Lunch"));
+  submitNewMeal(food:string,details:string,stringCalories:string,mealType:string){
+    var calories= parseInt(stringCalories);
+    this.createChildMeal.emit(new Meal(food,details,calories,mealType));
   }
 }
