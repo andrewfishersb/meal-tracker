@@ -6,19 +6,20 @@ import {Meal} from './meal.model';
   template:
   `
   <label>Food</label>
-  <input >
+  <input #newMeal>
   <label>Details</label>
-  <input >
+  <input #newDetails>
   <label>Calories</label>
-  <input >
-  <button class="btn btn-success">Submit</button>
+  <input type="number" #newCalories>
+  <button class="btn btn-success" (click)="submitMeal(newMeal.value,newDetails.value,newCalories.value); newMeal.value=''; newDetails.value='',newCalories=''">Submit</button>
 
   `
 })
 
 export class NewMealComponent{
   @Output() createChildMeal = new EventEmitter();
-  submitNewMeal(){
-    
+  submitNewMeal(food:string,details:string,calories:number){
+    // or add a new variable and take the new meal out of the createChildMeal.emit method
+    this.createChildMeal.emit(new Meal(food,details,calories));
   }
 }
