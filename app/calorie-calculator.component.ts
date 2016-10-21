@@ -21,7 +21,7 @@ export class CalorieCalculatorComponent{
       this.total+=mealArray[i].calories;
     }
     if(type==="average"){
-      return Math.floor(this.total/mealArray.length);
+      return Math.floor(this.total/mealArray.length*100)/10;
     }else{
       return this.total;
     }
