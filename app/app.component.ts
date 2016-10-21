@@ -7,6 +7,7 @@ import {Meal} from './meal.model'
   <div class="container">
     <h1>Meal Tracker</h1>
     <list-meals [childMeals]='allMeals'></list-meals>
+    <edit-meal></edit-meal>
   </div>
   `
 })

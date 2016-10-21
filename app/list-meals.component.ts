@@ -5,12 +5,11 @@ import {Component, Input} from "@angular/core";
   selector: 'list-meals',
   template:
   `
-    <h1>Meals Consumed</h1>
     <div *ngFor="let currentMeal of childMeals">
-      <li>{{currentMeal.food}}</li>
-      <li>{{currentMeal.details}}</li>
-      <li>{{currentMeal.calories}}</li>
-      <h5>-----------------------------</h5>
+      <li>Meal: {{currentMeal.food}}</li>
+      <li>Details: {{currentMeal.details}}</li>
+      <li>Calories: {{currentMeal.calories}}</li>
+      <button class="btn btn-info">Edit</button>
     </div>
 
   `
