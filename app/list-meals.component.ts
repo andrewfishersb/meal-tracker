@@ -14,8 +14,11 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
       <li>Meal: {{currentMeal.food}}</li>
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
-      <button class="btn btn-info" (click) = 'captureEditedMeal(currentMeal)'>Edit</button>
+      <button class="btn btn-info" (click) = 'clickedEditSetMeal(currentMeal)'>Edit</button>
       <button class="btn btn-danger" (click) = 'deleteMeal(currentMeal)'>Delete</button>
+      <div *ngIf="selectedMeal===currentMeal">
+        <edit-meal [childEditMeal]='this.selectedMeal' (clickSender)="finishedEditing()"></edit-meal>
+      </div>
     </div>
 
   `
@@ -23,11 +26,8 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
 
 export class ListMealComponent{
   @Input() childListMeals: Meal[];
-  @Output() editButtonClicked = new EventEmitter();
   public filteredElement: string = null;
-  captureEditedMeal(chosenMeal:Meal){
-    this.editButtonClicked.emit(chosenMeal);
-  }
+  public selectedMeal: Meal =null;
 
   selectedFilter(desiredOutput: string){
     this.filteredElement = desiredOutput;
@@ -35,5 +35,13 @@ export class ListMealComponent{
 
   deleteMeal(toDeleteMeal: Meal){
     this.childListMeals.splice(this.childListMeals.indexOf(toDeleteMeal),1);
+  }
+
+  clickedEditSetMeal(lastClickedMeal: Meal){
+    this.selectedMeal = lastClickedMeal;
+  }
+
+  finishedEditing(){
+    this.selectedMeal = null;
   }
 }

@@ -38,7 +38,7 @@ _This app lets a person enter meals that they have consumed alongside informatio
 
 ## Setup/Installation Requirements
 
-* _Git clone https://github.com/andrewfishersb/meal-tracker <-this may change_
+* _Git clone https://github.com/andrewfishersb/meal-tracker_
 * _Navgiate into the folder by typing 'cd meal-tracker' in the terminal_
 * _type npm install in the terminal_
 * _type bower install in the terminal_
@@ -61,7 +61,7 @@ __
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*GPL*
 
 Copyright (c) 2016 **_Andrew Fisher_**
 

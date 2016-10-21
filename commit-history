@@ -1,5 +1,29 @@
 Commit History not pushed because of the DDoS attack on GitHub
+----
+commit 1a44ef34a841614b60ee6daba3be2fde6e82ae57
+Author: Andrew Fisher <AndrewFishersb@gmail.com>
+Date:   Fri Oct 21 12:02:59 2016 -0700
 
+    updated the readme
+
+commit 58df0e2cc42438c096d3edf8d5543cf9849ee11d
+Author: Andrew Fisher <AndrewFishersb@gmail.com>
+Date:   Fri Oct 21 11:32:22 2016 -0700
+
+    add a delete button to the ListMealComponent, which holds a method called deleteMeal which will take in the currentMeal. This method grabs the array of meals (childListMeals) splicing by finding the index in the array of the currentMeal
+
+commit f0f8c69398be7932cdbe1cb217370530c4df57c4
+Author: Andrew Fisher <AndrewFishersb@gmail.com>
+Date:   Fri Oct 21 11:25:16 2016 -0700
+
+    deletes the delete-meal file as the functionality seemed pointless to do in its own component
+
+commit bb0598b0f371907dc4efba23df2ebacbf4061b1a
+Author: Andrew Fisher <AndrewFishersb@gmail.com>
+Date:   Fri Oct 21 11:09:49 2016 -0700
+
+    fixes bug that was setting desiredOutput equals to a string inside of a if statement instead of comparing the string(was missing two ==)
+ -----------
 commit 58df0e2cc42438c096d3edf8d5543cf9849ee11d
 Author: Andrew Fisher <AndrewFishersb@gmail.com>
 Date:   Fri Oct 21 11:32:22 2016 -0700
