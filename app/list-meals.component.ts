@@ -15,7 +15,7 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
       <button class="btn btn-info" (click) = 'captureEditedMeal(currentMeal)'>Edit</button>
-      
+      <button class="btn btn-danger" (click) = 'deleteMeal(currentMeal)'>Delete</button>
     </div>
 
   `
@@ -31,5 +31,9 @@ export class ListMealComponent{
 
   selectedFilter(desiredOutput: string){
     this.filteredElement = desiredOutput;
+  }
+
+  deleteMeal(toDeleteMeal: Meal){
+    this.childListMeals.splice(this.childListMeals.indexOf(toDeleteMeal),1);
   }
 }
