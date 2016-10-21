@@ -15,6 +15,7 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
       <li>Details: {{currentMeal.details}}</li>
       <li>Calories: {{currentMeal.calories}}</li>
       <button class="btn btn-info" (click) = 'captureEditedMeal(currentMeal)'>Edit</button>
+      
     </div>
 
   `
