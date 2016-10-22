@@ -63,6 +63,17 @@ _This app lets a person enter meals that they have consumed alongside informatio
 * _HTML_
 * _CSS_
 
+## Known Bugs
+* _If no meals listed, average is listed as NaN_
+* _If one meal doesn't have calories listed then the total and average become NaN_
+
+## Futer Ideas
+* _Allow user to enter in a time meal was consumed_
+* _Enter in a day of the week instead of meal type_
+* _Enter in an actual date instead of meal type_
+ * _Be able to filter by date_
+
+
 ### License
 
 *GPL*
