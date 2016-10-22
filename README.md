@@ -65,8 +65,10 @@ _This app lets a person enter meals that they have consumed alongside informatio
 
 ## Known Bugs
 * _If no meals listed, average is listed as NaN_
+ * _solve by checking for the size of meal array and if 0 set average to 0_
 * _If one meal doesn't have calories listed then the total and average become NaN_
-
+ * _in calorie-calculator.component check if calorie is NaN if dont add it and subtract 1 from division_
+  * _in list-meals.component check if calorie is NaN and print Not Available_
 ## Futer Ideas
 * _Allow user to enter in a time meal was consumed_
 * _Enter in a day of the week instead of meal type_
