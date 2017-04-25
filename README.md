@@ -8,6 +8,7 @@
 
 _This app lets a person enter meals that they have consumed alongside information pertaining to their food i.e. calories. The user can also filter meals by amount of calories_
 
+![ScreenShot](https://cloud.githubusercontent.com/assets/17396138/25399385/1d7c9678-29a4-11e7-87f4-adb90712f290.png)
 
 ## Specs
 1. _User can enter type of food they consumed_
